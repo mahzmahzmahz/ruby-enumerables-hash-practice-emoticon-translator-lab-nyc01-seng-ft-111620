@@ -10,8 +10,8 @@ def load_library(path)
 
   emoticons.each do |english_word, emoticon_set|
     temp_hash = Hash.new
-    temp_hash["english"] = emoticon_set[0]
-    temp_hash["japanese"] = emoticon_set[1]
+    temp_hash[:english] = emoticon_set[0]
+    temp_hash[:japanese] = emoticon_set[1]
     emoticon_hash[english_word] = temp_hash
   end
   emoticon_hash
