@@ -19,13 +19,12 @@ end
 
 def get_japanese_emoticon(file, emoticon)
   emoticons_hash = load_library(file)
-  emoticons_hash.each do |english_word,  v|
-    if emoticon = emoticons_hash[english_word]
-  
-  if result == nil
-    result = "Sorry, that emoticon was not found" 
+  emoticons_hash.each do |english_word, emoticon_hash|
+    if emoticon == emoticon_hash[:english]
+      return emoticon_hash[:japanese]
+    end
   end
-  result
+  return "Sorry, that emoticon was not found" 
 end
 
 def get_english_meaning(file, japanese_emoticon)
