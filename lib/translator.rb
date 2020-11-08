@@ -17,8 +17,8 @@ def load_library(path)
   emoticon_hash
 end
 
-def get_japanese_emoticon(path, emoticon)
-  emoticon_hash = load_library(path)
+def get_japanese_emoticon(file, emoticon)
+  emoticon_hash = load_library(file)
   result = emoticon_hash["get_emoticon"][emoticon]
   if result == nil
     result = "Sorry, that emoticon was not found" 
