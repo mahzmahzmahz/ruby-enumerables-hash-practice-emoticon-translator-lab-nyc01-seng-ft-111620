@@ -19,7 +19,8 @@ end
 
 def get_japanese_emoticon(file, emoticon)
   emoticon_hash = load_library(file)
-  result = emoticon_hash["get_emoticon"][emoticon]
+  emoticons_hash.each do |english_word, emoticon_set|
+  
   if result == nil
     result = "Sorry, that emoticon was not found" 
   end
